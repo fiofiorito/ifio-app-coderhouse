@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default function App() {
   const fem = 'a';
   const masc = 'o';
   const name = 'Fiorella';
+
+  const handlePress = () => {
+    console.log('clickeaste')
+  }
 
   return (<ScrollView style={styles.main}>
     <View style={styles.container}>
@@ -14,6 +18,7 @@ export default function App() {
       <Image style={styles.img} source={{
         url: 'https://www.freepnglogos.com/uploads/coffee-png/coffee-png-transparent-images-png-only-31.png',
       }} />
+      <Button style={styles.btn} title='ADD' onPress={handlePress} />
       <StatusBar style="auto" />
     </View>
   </ScrollView>
@@ -45,6 +50,10 @@ const styles = StyleSheet.create({
     height: 144,
     marginLeft: 180,
   },
+  btn: {
+    backgroundColor: '#EAEBEE',
+    color: '#DEC5A7'
+  }
 });
 
 /* COLORES:
